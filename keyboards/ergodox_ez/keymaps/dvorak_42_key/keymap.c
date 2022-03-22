@@ -127,48 +127,6 @@ enum custom_keycodes {
 #define AS_BM_TOGGLE KC_F11
 #define AS_BM_LIST LSFT(KC_F11)
 
-// visual studio code shortcuts
-#define VS_FILE LCTL(KC_P)
-#define VS_OPEN_FILE LCTL(KC_O)
-#define VS_LINE LCTL(KC_G)
-#define VS_SYMBOLEDITOR LCTL(LSFT(KC_O))
-#define VS_DEFINITION MEH(KC_F5)
-#define VS_IMPLEMENTATION MEH(KC_F6)
-#define VS_REFERENCES MEH(KC_F7)
-#define VS_BACK LALT(KC_LEFT)
-#define VS_BRACKET LCTL(LSFT(KC_BSLS))
-#define VS_TABLEFT MEH(KC_F1)
-#define VS_TABRIGHT MEH(KC_F2)
-#define VS_CLOSETAB MEH(KC_F3)
-#define VS_CLOSEPANEL LCTL(LSFT(KC_W))
-#define VS_GROUP_1 LCTL(KC_1)
-#define VS_GROUP_2 LCTL(KC_2)
-#define VS_TERMINAL LCTL(KC_GRAVE)
-#define VS_BUILD LCTL(LSFT(KC_B))
-#define VS_COMMANDS MEH(KC_F4)
-#define VS_CMT_BLOCK LSFT(LALT(KC_A))
-#define VS_CMT_LINE MEH(KC_F18)
-#define VS_DEL_LINE LCTL(LSFT(KC_K))
-#define VS_COPYLINEDOWN LSFT(LALT(KC_DOWN))
-// visual studio bookmark commands
-#define VS_BM_LIST LCTL(LALT(KC_L))
-#define VS_BM_LISTALL LCTL(LALT(KC_A))
-#define VS_BM_PREV LCTL(LALT(KC_P))
-#define VS_BM_NEXT LCTL(LALT(KC_N))
-#define VS_BM_TOGGLE LCTL(LALT(KC_K))
-#define VS_BM_CLEARALL LCTL(LALT(KC_C))
-// visual studio code navigation shortcuts
-#define VS_FOCUS_EDITOR MEH(KC_F8)
-#define VS_FOCUS_TERMINAL MEH(KC_F9)
-#define VS_TOGGLE_TERMINAL MEH(KC_F10)
-#define VS_CLEAR_TERMINAL MEH(KC_F11)
-#define VS_TERMINAL_PREV MEH(KC_F12)
-#define VS_TERMINAL_NEXT MEH(KC_F13)
-#define VS_TERMINAL_NEW MEH(KC_F14)
-#define VS_TERMINAL_DETACH MEH(KC_F15)
-#define VS_TERMINAL_RENAME MEH(KC_F16)
-#define VS_JUMPY MEH(KC_F17)
-#define VS_FIND MEH(KC_F19)
 
 
 #define MACRO_SCREEN_NUM(MACRO_NAME,NUM) \
