@@ -728,7 +728,11 @@ void matrix_scan_user(void) {
             ergodox_right_led_3_on();
             break;
 	case BROWSER_CONTROL:
+            ergodox_right_led_2_on();
+            ergodox_right_led_3_on();
+            break;    
 	case ANKI:
+            ergodox_right_led_1_on();
             ergodox_right_led_2_on();
             ergodox_right_led_3_on();
             break;
