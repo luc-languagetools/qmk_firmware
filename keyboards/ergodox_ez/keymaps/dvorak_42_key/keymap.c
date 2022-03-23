@@ -102,6 +102,7 @@ enum custom_keycodes {
 #define ANDROID_STUDIO   8 // android studio specific layer
 #define VSCODE           9 // visual studio code specific layer
 #define VSCODE_NAV       10 // visual studio code, navigation within IDE
+#define ANKI             11 // anki review shortcuts
 
 
 
@@ -201,13 +202,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [KEYNAV] = LAYOUT_ergodox(
     // left hand
-    KC_TRNS,KC_TRNS,     KC_TRNS,   KC_TRNS,         KC_TRNS,          KC_TRNS,          KC_TRNS,
-    KC_TRNS,KC_ESC,      KC_TRNS,   RCTL(KC_Z),      RCTL(KC_S),       KC_TRNS,          KC_TRNS,
-    KC_TRNS,KC_LSFT,     KC_TRNS,   RSFT(KC_TAB),    KC_TAB,           KC_TRNS,
-    KC_TRNS,KC_TRNS,     KC_TRNS,   KC_TRNS,         KC_TRNS,          KC_TRNS,          KC_TRNS,
-    KC_TRNS,KC_TRNS,     KC_TRNS,   KC_TRNS,         KC_TRNS,
+    KC_TRNS, KC_TRNS,     KC_TRNS,   KC_TRNS,         KC_TRNS,          KC_TRNS,          KC_TRNS,
+    KC_TRNS, KC_ESC,      KC_TRNS,   RCTL(KC_Z),      RCTL(KC_S),       KC_TRNS,          KC_TRNS,
+    DF(ANKI),KC_LSFT,     KC_TRNS,   RSFT(KC_TAB),    KC_TAB,           KC_TRNS,
+    KC_TRNS, KC_TRNS,     KC_TRNS,   KC_TRNS,         KC_TRNS,          KC_TRNS,          KC_TRNS,
+    KC_TRNS, KC_TRNS,     KC_TRNS,   KC_TRNS,         KC_TRNS,
     // left thumb cluster
-    KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,
+    KC_TRNS, KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,
 
 
     // right hand
@@ -456,6 +457,30 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
 
+    [ANKI] = LAYOUT_ergodox(
+		   // left hand
+           KC_TRNS,  KC_TRNS,      KC_TRNS,       KC_TRNS,       KC_TRNS,      KC_TRNS, KC_TRNS,
+           KC_TRNS,  KC_TRNS,      KC_TRNS,       KC_TRNS,       KC_TRNS,      KC_TRNS, KC_TRNS,
+           DF(BASE), KC_TRNS,      KC_TRNS,       KC_TRNS,       KC_TRNS,      KC_TRNS,
+           KC_TRNS,  KC_TRNS,      KC_TRNS,       KC_TRNS,       KC_TRNS,      KC_TRNS, KC_TRNS,
+		   // bottom row
+           KC_TRNS, KC_TRNS,      KC_TRNS,       KC_TRNS,       KC_TRNS,
+
+                                               KC_TRNS, KC_TRNS,
+                                                        KC_TRNS,
+                                      KC_TRNS, KC_TRNS, KC_TRNS,
+          // right hand
+           KC_TRNS,  KC_TRNS,   KC_TRNS,            KC_TRNS,      KC_TRNS,       KC_TRNS,       KC_TRNS,
+           KC_TRNS,  KC_TRNS,   KC_TRNS,            KC_TRNS,      KC_TRNS,       KC_TRNS,       KC_TRNS,
+                     KC_TRNS,   KC_1,               KC_2,         KC_3,          KC_TRNS,       KC_TRNS,
+           KC_TRNS,  KC_TRNS,   KC_TRNS,            KC_TRNS,      KC_TRNS,       KC_TRNS,       KC_TRNS,
+                                // bottom row
+                                KC_TRNS,            KC_TRNS,      KC_TRNS,       KC_TRNS,       KC_TRNS,
+           KC_TRNS, KC_TRNS,
+           KC_TRNS,
+           KC_R, KC_1, KC_ENTER
+    ),
+
 };
 
 
@@ -703,6 +728,7 @@ void matrix_scan_user(void) {
             ergodox_right_led_3_on();
             break;
 	case BROWSER_CONTROL:
+	case ANKI:
             ergodox_right_led_2_on();
             ergodox_right_led_3_on();
             break;
