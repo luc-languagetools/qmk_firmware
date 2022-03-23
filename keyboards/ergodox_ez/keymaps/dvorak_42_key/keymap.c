@@ -193,7 +193,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_BSPC,   RCTL(KC_BSPC), KC_CAPSLOCK, OSM(MOD_LSFT),MEH(KC_9),
 
       // right thumb cluster
-      MEH(KC_3), MEH(KC_4), MEH(KC_5), MEH(KC_6),KC_ENTER,KC_SPACE
+      MEH(KC_3), MEH(KC_4), 
+      MEH(KC_5), 
+      MEH(KC_6), KC_ENTER,KC_SPACE
 
   ),
 
